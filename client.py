@@ -5,7 +5,7 @@ myClientSocket = socket(AF_INET, SOCK_STREAM)
 myClientSocket.connect(('127.0.0.1', 9091))
 
 while True:
-    msg = input ("Diz tu: ")
+    msg = input ("envie uma mensagem: ")
     myClientSocket.send(msg.encode())
     data = myClientSocket.recv(2048)
     reply = data.decode()
