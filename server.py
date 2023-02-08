@@ -13,7 +13,7 @@ def HandleRequest(mClientSock, mClientAddr):
         data = mClientSock.recv(2048)
         req = data.decode()
         print(f'A solicitação feita pelo cliente foi {req}')
-        rep = 'sla qualquer coisa'
+        rep = 'ok'
         mClientSock.send(rep.encode())
         print(f'Mensagem enviada...')
 
